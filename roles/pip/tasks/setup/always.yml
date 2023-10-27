@@ -8,14 +8,23 @@
     mode: '775'
   loop: "{{ python_pip_allow_user_install_packages }}"
 
+- name: Check if pip config file exists
+  become: true
+  become_user: "{{ item }}"
+  ansible.builtin.stat:
+    path: "{{ python_pip_config_file }}"
+  register: pip_config_file
+  loop: "{{ python_pip_allow_user_install_packages }}"
+
 - name: Ensure pip config file exists
   become: true
   become_user: "{{ item }}"
   ansible.builtin.file:
     path: "{{ python_pip_config_file }}"
-    state: file
-    mode: '664'
+    state: touch
+    mode: '0664'
   loop: "{{ python_pip_allow_user_install_packages }}"
+  when: not (pip_config_file.results | selectattr('item', 'equalto', item) | list | first).stat.exists
 
 - name: Place config
   become: true

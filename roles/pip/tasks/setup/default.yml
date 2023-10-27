@@ -1,0 +1,8 @@
+---
+- name: Failover if no platform specific tasks are found
+  ansible.builtin.package:
+    name: python3-pip
+    state: present
+  when: true
+
+...

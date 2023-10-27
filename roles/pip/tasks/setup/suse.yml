@@ -1,0 +1,8 @@
+---
+- name: Failover if no platform specific tasks are found
+  community.general.zypper:
+    name: python3-pip
+    state: present
+  when: true
+
+...

@@ -1,0 +1,10 @@
+ancestor: null
+releases:
+  1.0.0:
+    changes:
+      major_changes:
+      - add pip role
+      release_summary: first release
+    fragments:
+    - major.yml
+    release_date: '2023-10-27'

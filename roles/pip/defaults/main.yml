@@ -1,0 +1,18 @@
+---
+# List of users to place `break-system-packages` config for. Required on newer Ubuntu versions.
+python_pip_allow_user_install_packages: []
+  # - "{{ ansible_user_id }}"
+python_pip_config_dir: "~/.config/pip"
+python_pip_config_file: "{{ python_pip_config_dir }}/pip.conf"
+python_pip_global_packages: []
+  # - name: ansible
+  #   version:
+  # - name: docker
+
+python_pip_user_packages: []
+  # - user: "{{ ansible_user_id }}"
+  #   packages: []
+  #     - name: ansible
+  #       version:
+  #     - name: docker
+...

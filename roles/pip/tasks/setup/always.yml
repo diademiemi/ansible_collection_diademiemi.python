@@ -1,0 +1,48 @@
+---
+- name: Ensure pip config directory exists
+  become: true
+  become_user: "{{ item }}"
+  ansible.builtin.file:
+    path: "{{ python_pip_config_dir }}"
+    state: directory
+    mode: '775'
+  loop: "{{ python_pip_allow_user_install_packages }}"
+
+- name: Ensure pip config file exists
+  become: true
+  become_user: "{{ item }}"
+  ansible.builtin.file:
+    path: "{{ python_pip_config_file }}"
+    state: file
+    mode: '664'
+  loop: "{{ python_pip_allow_user_install_packages }}"
+
+- name: Place config
+  become: true
+  become_user: "{{ item }}"
+  ansible.builtin.blockinfile:
+    dest: "{{ python_pip_config_file }}"
+    block: |
+      [global]
+      break-system-packages = true
+  loop: "{{ python_pip_allow_user_install_packages }}"
+
+- name: Install global packages
+  become: true
+  ansible.builtin.pip:
+    name: "{{ item.name }}"
+    state: present
+    version: "{{ item.version | default(omit) }}"
+  loop: "{{ python_pip_global_packages }}"
+
+- name: Install user packages
+  become: true
+  become_user: "{{ item.0.user }}"
+  ansible.builtin.pip:
+    name: "{{ item.1.name }}"
+    state: present
+    version: "{{ item.1.version | default(omit) }}"
+    extra_args: "--user"
+  loop: "{{ python_pip_user_packages | subelements('packages') }}"
+
+...

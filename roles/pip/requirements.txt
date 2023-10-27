@@ -1,6 +1,6 @@
 yamllint
 ansible-lint
-ansible
+ansible==8.5.0
 ansible-compat
 antsibull-changelog
 molecule

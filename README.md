@@ -1,7 +1,5 @@
 Ansible Collection - diademiemi.python
 ========================================
-[![Molecule Test](https://github.com/diademiemi/ansible_collection_diademiemi.python/actions/workflows/molecule.yml/badge.svg)](https://github.com/diademiemi/ansible_collection_diademiemi.python/actions/workflows/molecule.yml)
-
 Documentation for the collection python.
 
 Contents 
@@ -9,9 +7,9 @@ Contents
 
 Roles
 ------
-Role | Description
---- | ---
-<!-- [diademiemi.python.role](./roles/role/) | Example role -->
+Role | Description | CI Status
+--- | --- | ---
+[diademiemi.python.pip](./roles/pip/) | Install Python Pip and packages | [![Molecule test](https://github.com/diademiemi/ansible_collection_diademiemi.python/actions/workflows/ansible-role-pip.yml/badge.svg)](https://github.com/diademiemi/ansible_collection_diademiemi.python/actions/workflows/ansible-role-pip.yml)
 
 Click on the role to see the README for that role.  
 

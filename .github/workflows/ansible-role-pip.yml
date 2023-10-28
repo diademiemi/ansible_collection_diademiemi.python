@@ -2,7 +2,7 @@
 # This workflow requires a GALAXY_API_KEY secret present in the GitHub
 # repository or organization.
 
-name: Molecule test "pip" role
+name: Molecule tests for pip
 
 "on":
   push:
@@ -22,10 +22,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: "Free Disk Space."
-        uses: jlumbroso/free-disk-space@main
-        with:
-          tool-cache: true
+      # - name: "Free Disk Space."
+      #   uses: jlumbroso/free-disk-space@main
+      #   with:
+      #     tool-cache: true
 
       - name: Set up Python
         uses: actions/setup-python@v4

@@ -8,3 +8,11 @@ releases:
     fragments:
     - major.yml
     release_date: '2023-10-27'
+  2.0.0:
+    changes:
+      major_changes:
+      - Rework CI
+      release_summary: Rework CI
+    fragments:
+    - 2.yml
+    release_date: '2023-10-28'

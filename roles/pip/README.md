@@ -1,11 +1,11 @@
 Ansible Role Template
 =========
 
-[![Molecule Test](https://github.com/diademiemi/ansible_role_pip/actions/workflows/molecule.yml/badge.svg)](https://github.com/diademiemi/ansible_role_pip/actions/workflows/molecule.yml)
+[![Molecule test](https://github.com/diademiemi/ansible_collection_diademiemi.python/actions/workflows/ansible-role-pip.yml/badge.svg)](https://github.com/diademiemi/ansible_collection_diademiemi.python/actions/workflows/ansible-role-pip.yml)
 
 This is an Ansible role to install Python pip and install packages.
 
-It can also place the annoying `break-system-packages = true` in `pip.conf` to allow users to install packages.
+It can also place the annoying `break-system-packages = true` in `~/.config/pip/pip.conf` to allow users to install packages.
 
 Requirements
 ------------

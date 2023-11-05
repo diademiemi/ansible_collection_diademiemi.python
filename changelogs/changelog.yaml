@@ -25,3 +25,11 @@ releases:
     fragments:
     - changelog.yml
     release_date: '2023-11-05'
+  3.1.0:
+    changes:
+      major_changes:
+      - Fix become on pip role
+      release_summary: Fix become on pip role
+    fragments:
+    - 1.yml
+    release_date: '2023-11-05'

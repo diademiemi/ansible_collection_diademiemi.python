@@ -5,6 +5,19 @@ diademiemi.python Release Notes
 .. contents:: Topics
 
 
+v3.1.0
+======
+
+Release Summary
+---------------
+
+Fix become on pip role
+
+Major Changes
+-------------
+
+- Fix become on pip role
+
 v3.0.0
 ======
 

@@ -1,5 +1,6 @@
 ---
-- name: Failover if no platform specific tasks are found
+- name: Install pip
+  become: true
   community.general.zypper:
     name: python3-pip
     state: present

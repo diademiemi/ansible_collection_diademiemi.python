@@ -1,0 +1,13 @@
+---
+python_pip_allow_user_install_packages:
+  - testuser
+
+python_pip_global_packages:
+  - name: PyYAML
+
+python_pip_user_packages:
+  - user: testuser
+    packages:
+      - name: PyYAML
+
+...

@@ -9,7 +9,7 @@ name: Molecule Tests pip
     branches:
       - main
     paths:
-      - "roles/pip"
+      - "roles/pip/**"
   workflow_dispatch:
 
 jobs:

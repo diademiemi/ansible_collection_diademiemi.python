@@ -16,3 +16,12 @@ releases:
     fragments:
     - 2.yml
     release_date: '2023-10-28'
+  3.0.0:
+    changes:
+      major_changes:
+      - add Debian 12
+      - update CI examples
+      release_summary: Update CI & Add Debian 12
+    fragments:
+    - changelog.yml
+    release_date: '2023-11-05'

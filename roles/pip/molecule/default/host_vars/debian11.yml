@@ -1,6 +1,0 @@
----
-python_pip_global_packages:
-  - name: ansible
-    version: 8.5.0
-
-...

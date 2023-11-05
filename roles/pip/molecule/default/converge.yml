@@ -30,11 +30,9 @@
         name: testuser
         shell: /bin/bash
         password: "{{ 'testuser' | password_hash('sha512') }}"
-        groups: sudo
         append: true
         state: present
       tags: molecule-idempotence-notest
-      when: ansible_os_family == 'Debian'  # Only run these tests on Debian
 
   tasks:
     - name: "Include diademiemi.pip"

@@ -18,7 +18,7 @@ These platforms are supported:
 - EL 8 (Tested on Rocky Linux 8)
 - EL 9 (Tested on Rocky Linux 9)
 - Fedora 38
-- openSUSE Leap 15.4
+- openSUSE Leap 15.5
 
 <!--
 - List hardware requirements here  
@@ -49,10 +49,10 @@ Example Playbook
 ----------------
 
 ```yaml
-- name: Use diademiemi.pip role
+- name: Use diademiemi.python.pip role
   hosts: "{{ target | default('pip') }}"
   roles:
-    - role: "diademiemi.pip"
+    - role: "diademiemi.python.pip"
       tags: ['diademiemi', 'pip', 'setup']    ```
 
 ```

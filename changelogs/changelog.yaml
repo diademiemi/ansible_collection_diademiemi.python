@@ -33,3 +33,11 @@ releases:
     fragments:
     - 1.yml
     release_date: '2023-11-05'
+  3.1.1:
+    changes:
+      minor_changes:
+      - Add antsibull-docs to requirements.txt
+      release_summary: Minor Changes
+    fragments:
+    - fragment.yml
+    release_date: '2024-02-05'

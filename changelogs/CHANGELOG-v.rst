@@ -5,6 +5,19 @@ diademiemi.python Release Notes
 .. contents:: Topics
 
 
+v3.1.1
+======
+
+Release Summary
+---------------
+
+Minor Changes
+
+Minor Changes
+-------------
+
+- Add antsibull-docs to requirements.txt
+
 v3.1.0
 ======
 
